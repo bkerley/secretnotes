@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
     if @user
       # logged in, hooray
+      session[:user_id] = @user.id
       redirect_to notes_path
     else
       render action: 'new'
