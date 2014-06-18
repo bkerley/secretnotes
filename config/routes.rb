@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :notes
+
   root to: 'sessions#new'
   resource :sessions
   resource :users
